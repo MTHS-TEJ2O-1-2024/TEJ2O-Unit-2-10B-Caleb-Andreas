@@ -7,7 +7,7 @@
 */
 
 // Variables.
-let lightLevel: number
+let lightLevel: number = 0
 let neopixelStrip: neopixel.Strip = null
 
 // Cleanup then happy face at start
@@ -34,7 +34,9 @@ input.onButtonPressed(Button.A, function () {
     // Get light level then back to happy.
     lightLevel = input.lightLevel()
     basic.pause(500)
-    basic.showIcon(IconNames.Happy)
+    basic.clearScreen()
+    basic.showNumber(lightLevel)
+
 
     // Set all neopixels to black if lightLevel <= 51.
     if (lightLevel <= 51) {
