@@ -12,6 +12,7 @@ let neopixelStrip: neopixel.Strip = null
 
 // Cleanup then happy face at start
 basic.clearScreen()
+lightLevel = input.lightLevel()
 neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
 neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
