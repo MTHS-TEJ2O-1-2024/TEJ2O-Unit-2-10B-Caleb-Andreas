@@ -33,11 +33,10 @@ input.onButtonPressed(Button.A, function () {
     basic.pause(500)
 
     // Get light level then back to happy.
+    basic.clearScreen()
     lightLevel = input.lightLevel()
     basic.pause(500)
-    basic.clearScreen()
-    basic.showNumber(lightLevel)
-
+    basic.showIcon(IconNames.Happy)
 
     // Set all neopixels to black if lightLevel <= 51.
     if (lightLevel <= 51) {
